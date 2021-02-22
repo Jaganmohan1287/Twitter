@@ -1,19 +1,47 @@
-import { applyMiddleware, createStore } from "redux";
-import createSagaMiddleware from "redux-saga";
+{
+  "requestobjects": [
+    {
+      "posts": {
+        "operationtype": "read",        
+        "id": {
+          "return": true
+        },
+        "userid": {
+            "searchvalues" : ["41329663-5834-11eb-8e6e-3ca82abc3dd4"],
+          "return": true
+        },
+        "iscalendarentry": {
+            "searchvalues" : ["true"],
+          "return": true
+        },        
+        "media": {
+          "return": true
+        },
+        "rating": {
+          "return": true
+        },
+        "text": {
+          "return": true
+        },
+        "privacy": {
+          "searchvalues": [
+            18
+          ],
+          "return": true
+        },
+        "typeofday": {
+          "return": true
+        },
 
-import logger from "redux-logger";
-import thunk from "redux-thunk";
-import promise from "redux-promise-middleware";
+        
 
-import reducer from "./reducers";
-// import fetchTweets from "./sagas/tweets";
-import rootSaga from "./sagas/sagas";
-
-const sagaMiddleware = createSagaMiddleware();
-
-const store = createStore(reducer, applyMiddleware(logger, sagaMiddleware));
-
-sagaMiddleware.run(rootSaga);
-// const action = type => store.dispatch({ type });
-
-export default store;
+        "calendardatetime": { 
+          "return": true  , 
+          "sort" : "descending" 
+        },
+        "maxitemcount": "20",  
+        "continuationtoken": 
+      }
+    }
+  ]
+}
